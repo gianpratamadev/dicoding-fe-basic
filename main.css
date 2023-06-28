@@ -23,6 +23,10 @@ body {
   max-width: 1200px;
 }
 
+hr {
+  border: 1px solid #dddddd;
+}
+
 h2, h3 {
   color: var(--navyColor);
 }
@@ -30,11 +34,6 @@ h2, h3 {
 ul {
   list-style: none;
   display: flex;
-}
-
-li, li.nav-dropdown  {
-  padding: 0px 16px;
-  padding-bottom: 20px;
 }
 
 li:hover {
@@ -75,6 +74,12 @@ body > nav  {
   justify-self: flex-end;
   padding: 20px 0px 0px;
 }
+
+.nav-menu li {
+  padding: 0px 16px;
+  padding-bottom: 20px;
+}
+
 
 .nav-dropdown {
   padding: 0px 0px 20px;
