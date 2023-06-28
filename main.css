@@ -2,9 +2,9 @@
   --blueColor: #1e90ff;
   --blackColor: #001C30;
   --navyColor: #176B87;
-  --tealColor: #64CCC5;
-  --mintColor: #DAFFFB;
-  --greyColor: #c0c0c0; 
+  --tealColor: #66ccc5;
+  --mintColor: rgb(218, 255, 251);
+  --greyColor: #a8a8a8; 
 }
 
 * {
@@ -79,7 +79,6 @@ body > nav  {
   padding: 0px 16px;
   padding-bottom: 20px;
 }
-
 
 .nav-dropdown {
   padding: 0px 0px 20px;
@@ -230,7 +229,7 @@ aside {
   gap: 24px;
 }
 
-aside > header {
+aside header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -332,6 +331,45 @@ footer li {
 .span-article {
  color: var(--greyColor);
  font-size: 12px; 
+}
+
+.aside-doctor-card {
+  display: flex;
+  flex-direction: row;
+  padding: 12px 0px;
+  gap: 16px;
+}
+
+.aside-doctor-card .doctor-img img {
+  width: 75px;
+  border-radius: 50%;
+}
+
+.aside-doctor-card .doctor-info {
+  display: inherit;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.doctor-info p {
+  font-weight: bold;
+  color: var(--navyColor);
+}
+
+.doctor-info span {
+  color: var(--greyColor);
+}
+
+.doctor-info .secondary-button {
+  width: 130px;
+}
+
+
+.secondary-button {
+  background-color: white;
+  border: 1px solid var(--navyColor);
+  color: var(--navyColor);
+  font-weight: 500;
 }
 
 .aside-article {
