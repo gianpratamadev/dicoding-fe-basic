@@ -29,6 +29,7 @@ hr {
 
 h2, h3 {
   color: var(--navyColor);
+  text-align: justify;
 }
 
 ul {
@@ -333,6 +334,13 @@ footer li {
  font-size: 12px; 
 }
 
+.aside-doctor {
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  margin-bottom: 36px;
+  height: 400px;
+}
+
 .aside-doctor-card {
   display: flex;
   flex-direction: row;
@@ -341,7 +349,7 @@ footer li {
 }
 
 .aside-doctor-card .doctor-img img {
-  width: 75px;
+  width: 85px;
   border-radius: 50%;
 }
 
@@ -449,14 +457,12 @@ Media Query
 @media screen and (max-width: 900px) { 
   nav, main, footer, article {
     flex-direction: column;
-    align-items: center;
   }
 
   #content {
-    align-items: center;
     padding: 0px;
     margin: 0px;
-    width: 80%;
+    width: 100%;
   }
 
   #content > article {
@@ -481,46 +487,14 @@ Media Query
     width: calc(100% / 2);
   }
 
-  .carousel img {
-    width: calc(100% / 2);
-  }
-}
-
-@media screen and (max-width: 768px) { 
-  nav, main, footer, article {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #content {
-    align-items: center;
-    padding: 0px;
-    margin: 0px;
-    width: 80%;
-  }
-
-  #content > article {
-    gap: 10px;
-    text-align: justify;
-    margin-bottom: 48px;
-  }
-
-  .img-article {
-    display: block;
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-
-  }
-
-  .img-article img {  
+  aside {
     width: 100%;
   }
 
-  .carousel img {
-    width: calc(100% / 2);
+  footer {
+    padding: 20px;
+    width: 100%;
   }
-
 }
 
 
@@ -532,6 +506,6 @@ Media Query
   
   .carousel img {
     width: 100%;
-  }
+  } 
 
 }
