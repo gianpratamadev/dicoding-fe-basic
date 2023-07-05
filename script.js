@@ -75,3 +75,19 @@ carousel.addEventListener("touchmove", dragging);
 carousel.addEventListener("mouseup", dragStop);
 carousel.addEventListener("mouseleave", dragStop);
 carousel.addEventListener("touchend", dragStop);
+
+// Ini adadalah
+$(document).ready(function () {
+  var listMenuDisplay = false;
+
+  $(".bar-menu").click(function () {
+    if (listMenuDisplay) {
+      $(".nav-list-mobile").css("display", "none");
+      listMenuDisplay = false;
+      $(".bar-menu").append("<i>");
+    } else {
+      $(".nav-list-mobile").css("display", "flex");
+      listMenuDisplay = true;
+    }
+  });
+});
