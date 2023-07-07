@@ -76,18 +76,31 @@ carousel.addEventListener("mouseup", dragStop);
 carousel.addEventListener("mouseleave", dragStop);
 carousel.addEventListener("touchend", dragStop);
 
-// Ini adadalah
+// Menu Mobile
 $(document).ready(function () {
   var listMenuDisplay = false;
+  var mobileBarIcon = "fa-solid fa-bars";
 
-  $(".bar-menu").click(function () {
+  updateMenuIcon = () => {
+    var iconElement = `<i class="${mobileBarIcon}" style="font-size: 28px; padding-top: 24px;"></i>`;
+    $(".bar-menu").html(iconElement);
+  };
+
+  updateMenuIcon();
+
+  $(".bar-menu").click(() => {
     if (listMenuDisplay) {
-      $(".nav-list-mobile").css("display", "none");
       listMenuDisplay = false;
-      $(".bar-menu").append("<i>");
+      mobileBarIcon = "fa-solid fa-bars";
     } else {
-      $(".nav-list-mobile").css("display", "flex");
       listMenuDisplay = true;
+      mobileBarIcon = "fa-solid fa-close";
     }
+    updateMenuIcon();
+    $(".nav-list-mobile").fadeToggle();
+  });
+
+  $(".nav-dropdown-mobile").click(() => {
+    $(".nav-dropdown-items").fadeToggle();
   });
 });

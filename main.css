@@ -80,25 +80,21 @@ body > nav  {
   padding: 20px 0px 0px;
 }
 
-.nav-menu li {
+.nav-menu > ul > li {
   padding: 0px 16px;
   padding-bottom: 20px;
 }
 
-.nav-dropdown {
-  padding: 0px 0px 20px;
-}
-
 .nav-dropdown .nav-dropdown-items{
-  display: none;
-  flex-direction: column;
-  gap: 16px;
-  position: absolute;
-  top:65px;
+  display: none; 
 }
 
 .nav-dropdown:hover .nav-dropdown-items{
   display: flex;
+  flex-direction: column;
+  position: absolute;
+  top:65px;
+  gap: 24px;
   width: 100%;
   left: 0;
   text-align: center;
@@ -106,7 +102,6 @@ body > nav  {
   padding: 24px 0px;
   border-radius: 0px 0px 12px 12px;
 }
-
 
 .top-bar {
   position: sticky;
@@ -508,6 +503,7 @@ Media Query
 
   .nav-list-mobile li {
     color: white;
+    display: inline;
   }
 
   .nav-dropdown-mobile .nav-dropdown-items{
@@ -516,7 +512,12 @@ Media Query
     gap: 16px;
     position: absolute;
     left:220px;
-    width: 100px;
+    width: 100%;
+    background-color: #1e90ff;
+    height: 93%;
+    top:0;
+    padding-bottom: 0;
+    z-index: 5;
   }
 
   .nav-logo {
