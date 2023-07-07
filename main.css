@@ -511,7 +511,6 @@ Media Query
     flex-direction: column;
     gap: 16px;
     position: absolute;
-    left:220px;
     width: 100%;
     background-color: #1e90ff;
     height: 93%;
