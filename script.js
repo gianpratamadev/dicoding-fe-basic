@@ -92,15 +92,25 @@ $(document).ready(function () {
     if (listMenuDisplay) {
       listMenuDisplay = false;
       mobileBarIcon = "fa-solid fa-bars";
+      $(".nav-list-mobile").css("display", "none");
     } else {
       listMenuDisplay = true;
       mobileBarIcon = "fa-solid fa-close";
+      $(".nav-list-mobile").css("display", "flex");
     }
     updateMenuIcon();
-    $(".nav-list-mobile").fadeToggle();
   });
 
-  $(".nav-dropdown-mobile").click(() => {
-    $(".nav-dropdown-items").fadeToggle();
-  });
+  // fixing menu hover pada web & click menu pada mobile
+  if (window.matchMedia("(max-width: 900px)").matches) {
+    $(".nav-dropdown-mobile").on("click", () => {
+      if (listMenuDisplay == false) {
+        $(".nav-dropdown-mobile > .nav-dropdown-items").css("display", "flex");
+        listMenuDisplay = true;
+      } else {
+        $(".nav-dropdown-mobile > .nav-dropdown-items").css("display", "none");
+        listMenuDisplay = false;
+      }
+    });
+  }
 });

@@ -501,9 +501,8 @@ Media Query
     background-color: var(--navyColor);
   }
 
-  .nav-list-mobile li {
-    color: white;
-    display: inline;
+  .nav-list-mobile li, .nav-list-mobile i {
+    color: white !important; 
   }
 
   .nav-dropdown-mobile .nav-dropdown-items{
