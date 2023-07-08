@@ -50,7 +50,7 @@ nav li:hover:not(.nav-dropdown-items li, .nav-menu-mobile li) {
   border-bottom: 5px solid var(--tealColor);
 }
 
-body > nav  {
+body > header > nav  {
   padding: 0px 24px;
   position: sticky;
   top: 37px;
