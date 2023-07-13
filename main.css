@@ -87,10 +87,6 @@ body > header > nav  {
 
 .nav-dropdown .nav-dropdown-items{
   display: none; 
-}
-
-.nav-dropdown:hover .nav-dropdown-items{
-  display: flex;
   flex-direction: column;
   position: absolute;
   top:65px;

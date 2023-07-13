@@ -76,41 +76,42 @@ carousel.addEventListener("mouseup", dragStop);
 carousel.addEventListener("mouseleave", dragStop);
 carousel.addEventListener("touchend", dragStop);
 
-// Menu Mobile
+// jQuery
 $(document).ready(function () {
-  var listMenuDisplay = false;
-  var mobileBarIcon = "fa-solid fa-bars";
+  // var listMenuDisplay = false;
+  // var mobileBarIcon = "fa-solid fa-bars";
 
-  updateMenuIcon = () => {
-    var iconElement = `<i class="${mobileBarIcon}" style="font-size: 28px; padding-top: 24px;"></i>`;
-    $(".bar-menu").html(iconElement);
-  };
+  // updateMenuIcon = () => {
+  //   var iconElement = `<i class="${mobileBarIcon}" style="font-size: 28px; padding-top: 24px;"></i>`;
+  //   $(".bar-menu").html(iconElement);
+  // };
 
-  updateMenuIcon();
+  // updateMenuIcon();
 
   $(".bar-menu").click(() => {
-    if (listMenuDisplay) {
-      listMenuDisplay = false;
-      mobileBarIcon = "fa-solid fa-bars";
-      $(".nav-list-mobile").css("display", "none");
-    } else {
-      listMenuDisplay = true;
-      mobileBarIcon = "fa-solid fa-close";
-      $(".nav-list-mobile").css("display", "flex");
-    }
-    updateMenuIcon();
+    // if (listMenuDisplay) {
+    //   $(".nav-list-mobile").fadeIn("fast").css("display", "none");
+    //   listMenuDisplay = false;
+    //   mobileBarIcon = "fa-solid fa-bars";
+    // } else {
+    //   $(".nav-list-mobile").fadeOut("fast").css("display", "flex");
+    //   listMenuDisplay = true;
+    //   mobileBarIcon = "fa-solid fa-close";
+    // }
+    // updateMenuIcon();
+    $(".nav-list-mobile").fadeToggle("fast").css("display", "flex");
   });
 
-  // fixing menu hover pada web & click menu pada mobile
   if (window.matchMedia("(max-width: 900px)").matches) {
     $(".nav-dropdown-mobile").on("click", () => {
-      if (listMenuDisplay == false) {
-        $(".nav-dropdown-mobile > .nav-dropdown-items").css("display", "flex");
-        listMenuDisplay = true;
-      } else {
-        $(".nav-dropdown-mobile > .nav-dropdown-items").css("display", "none");
-        listMenuDisplay = false;
-      }
+      $(".nav-dropdown-mobile > .nav-dropdown-items")
+        .fadeToggle()
+        .css("display", "flex");
     });
   }
+
+  // Web
+  $(".nav-dropdown").hover(() => {
+    $(".nav-dropdown-items").slideToggle("fast").css("display", "flex");
+  });
 });
