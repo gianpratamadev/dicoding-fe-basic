@@ -50,11 +50,15 @@ nav li:hover:not(.nav-dropdown-items li, .nav-menu-mobile li) {
   border-bottom: 5px solid var(--tealColor);
 }
 
-body > header > nav  {
-  padding: 0px 24px;
+body > header {
   position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+header > nav {
+  padding: 0px 24px;
   top: 37px;
-  z-index: 3;
   background-color: white;
   display: flex;
   max-width: 1200px;
@@ -89,7 +93,7 @@ body > header > nav  {
   display: none; 
   flex-direction: column;
   position: absolute;
-  top:65px;
+  top:104px;
   gap: 24px;
   width: 100%;
   left: 0;
